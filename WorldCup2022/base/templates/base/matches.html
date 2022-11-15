@@ -1,0 +1,14 @@
+{% extends 'main.html'%}
+
+{% block content%}
+<h3>Matches</h3>
+
+<div>
+    {% for match in matches %}
+        <div>
+            <h5> {{ match.id }} -- {{ match.name }}</h5>
+        </div>
+
+    {% endfor %}
+</div>
+{% endblock content %}
