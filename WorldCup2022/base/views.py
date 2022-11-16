@@ -10,6 +10,14 @@ def home(request):
     context = {'matches': matches}
     return render(request, 'base/homepage.html', context=context)
 
-def match(request):
+def all_matches(request):
     context = {'matches': matches}
     return render(request, 'base/matches.html', context=context)
+
+def one_match(request, pk):
+    match = None
+    for mt in matches:
+        if mt['id'] == pk:
+            match = mt
+    context = {'match': match}
+    return render(request, 'base/match.html', context=context)

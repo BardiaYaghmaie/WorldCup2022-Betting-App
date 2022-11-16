@@ -6,7 +6,7 @@
 <div>
     {% for match in matches %}
         <div>
-            <h5> {{ match.id }} -- {{ match.name }}</h5>
+            <h5> {{ match.id }} -- <a href="{% url 'one_match' match.id%}">{{ match.name }}</a></h5>
         </div>
 
     {% endfor %}
